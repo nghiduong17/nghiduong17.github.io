@@ -44,71 +44,85 @@
                     </button>
                     <a class="navbar-brand" href="#page-top">Nghi Duong</a>
                 </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="hidden">
-                            <a href="#page-top"></a>
-                        </li>
-                        <li class="page-scroll">
-                            <a href="#about">About</a>
-                        </li>
-                        <li class="page-scroll">
-                            <a href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                </div> <!-- /.navbar-collapse -->
+                </div> --> <!-- /.navbar-collapse -->
             </div> <!-- /.container-fluid -->
         </nav>
 
         <section id="poforlio">
 
             <!-- PUBLICATION SECTION -->
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-11">
+                    <div class="col-md-2"> <!-- Display profile photo here -->
                         <div class="form-group">
-                            <h5><font color="#F28334" class="text-center">Publication:</font></h5>
+                            <img src="img/nghi_1.jpg" alt="Profile Photo" width="200" height="200">
                         </div> <!-- end div form-group -->
+                    </div> <!-- end div row-md-2 -->
+
+                    <div class="col-md-10"> <!-- About me Section -->
+                        <div class="row">
+                            <div class="col-md-1">
+                                <strong><font color="#F28334">Education:</font></strong>
+                            </div> <!-- end div form-group -->
+                            <div class="col-md-9">
+                                M. Sc. In Computer Science at California Polytechnic, Pomona (From Sep 2017 to Present)
+                            </div><br>
+                            <div class="col-md-1"></div>
+                            <div class="col-md-9">
+                                B. Sc. in Mathematics and Computer Sience at U. Of California, San Diego (From Sep 2013 to March 2016)
+                            </div>
+                        </div>
                         
-                        <!-- LIST PUBLICATION HERE -->
-                        <tr>
-                            <td align="left">
-                                <ul>
-                                    <li>
-                                        <p style="text-align: justify; text-justify: inter-word;">Tuan A. Duong, Nghi Duong, and Duong Le.  <br>
-                                        <b>
-                                            <a href="http://aip.scitation.org/doi/abs/10.1063/1.4972643">Integration of bio-inspired, control-based visual and olfactory data for the detection of an elusive target.
-                                            </a> 
-                                        </b><br> 
+                        <div class="row">
+                            <div class="col-md-10">
+                                <font color="#F28334"><strong>Research Interests:</strong></font>
+                                Machine Learning, Computer Vision
+                            </div> <!-- end div form-group -->
+                        </div>
 
-                                        AIP Conference Proceedings 1798, 020051 (2017)
-                                        </p>
-                                    </li>
-                                </ul>
-                            </td>
-                        </tr>
-
-                    </div> <!-- end div row-md-11 -->
+                        <div class="row">
+                            <div class="col-md-10">
+                                <font color="#F28334"><strong>Contact:</strong></font>
+                                nghi@naduongonvision.net
+                            </div> <!-- end div form-group -->
+                        </div>
+                    </div> <!-- end div row-md-2 -->
                 </div> <!-- end div row -->    
             </div> <!-- end div container -->
-        
 
             <!-- RESEARCH PROJECT  -->
             <div class="container">
-                <div class="row">
-                    <div class="col-md-11">
+                    <div class="col-md-12">
                         <div class="form-group">
-                            <h5><font color="#F28334" class="text-center">Project:</font></h5>
+                            <h5><font color="#F28334" class="text-center">Projects:</font></h5>
                         </div> <!-- end div form-group -->
                         
                         <!-- LIST Project HERE -->
+
+                        <div class="grid-example col m10">
+                            <h6><b>Bio Feature Extraction</b></h6>
+                            <p>
+                                A study about Bio-Inspired Visual System, which is based on an extended visual model that consists saccadic eye movement and visual pathway (vertebrate retina, lateral geniculate nucleus and visual cortex). This model applies variants of principal component analysis, to extract unique features from input data. 
+                                <a href="http://aip.scitation.org/doi/abs/10.1063/1.4972643">[Paper]</a><br>
+                                Applying this work to study about bio features of faces, using in facial recognition. 
+                            </p><br><br>
+                        </div>
+
+
                         <div class="grid-example col m10">
                             <h6><b>3D Face Modeling</b></h6>
-                            <img src="img/mean_3dmm.gif" width="250" height="300">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="img/mean_3dmm.gif" width="250" height="300">
+                                </div>
+                                <div class="col-md-8">
+                                    <img src="img/3dmm.png" width="700" height="300">
+                                </div>
+                            </div>
                             <p>
-                                Reconstruction a 3D face model from single 2D image. Current state of my work is fitting 3D Morphable model to 2D image using hard edge correspondence and landmark correspondence (Done- Link to code). Next steps are to make the model work with low resolution image, estimate texture and expression.    
+                                Reconstruction a 3D face model from single 2D image. Current state of my work is fitting 3D Morphable model to 2D image using hard edge correspondence and landmark correspondence, and least square optimization with constraints.
+                                <a href="https://bitbucket.org/naduong/3d-face-model">[Code]</a><br>
+                                Next steps are to estimate and render texture (two possible approaches are using Gauss-Newton iterative method or using CNN model), enhance low resolution/blurry images so that they could work with 3D model, and learn expression model.
                             </p><br><br>
                         </div> 
                             
@@ -117,14 +131,14 @@
                             <h6><b>Face In The Wild Alignment</b></h6>
                                 <img src="img/alignment.png" width="750" height="500">
                                 <p>
-                                    This is pre-processing step of large scale face images (data from megaFace project of University of Washington). This pre-process does landmark detection, align eye level, crop face image and scale to certain size. (link to code)   
+                                    This is pre-processing tool used to prepare large scale face images (data from megaFace project of University of Washington). This pre-process steps will include landmark detection, align eye level, crop face image and scale to certain size. 
+                                    <a href="https://bitbucket.org/naduong/face_feature/src/dd49f74224b84aabf2b2678471eabe9c95535878/face_alignment/?at=master">[Code]</a><br>
                                 </p>
                         </div>
                             
                         </div>
                         
-                        
-                    </div> <!-- end div row-md-11 -->
+                    
                 </div> <!-- end div row -->    
             </div> <!-- end div container -->
 
