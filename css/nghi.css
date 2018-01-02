@@ -75,7 +75,15 @@ header .container {
 header img {
   display: block;
   margin: 0 auto 20px;
+  max-width: 100%;
+  height: auto;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 header .intro-text .name {
   display: block;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
